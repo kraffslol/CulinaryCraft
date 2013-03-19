@@ -36,7 +36,7 @@ public class CulinaryCraft {
 	public final static ItemSeeds coffeeBeans = (ItemSeeds) new CoffeeBeans(9204, coffeeCrop.blockID, Block.tilledField.blockID);
 	public final static Item coffeeCherry = new CoffeeCherry(9205); // Coffee Cherry
 	
-	
+	// Test
 	
 	
 	@SidedProxy(clientSide="kraffs.culinarycraft.client.ClientProxy", serverSide="kraffs.culinarycraft.CommonProxy")
