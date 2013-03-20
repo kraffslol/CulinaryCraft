@@ -31,7 +31,6 @@ public class CulinaryCraft {
 	private final static Item friedEgg = new FriedEgg(9201, 5, 2.0F, false);
 	private final static Item Cup = new Cup(9202);
 	private final static Item Coffee = new Coffee(9203, 1, 2.0F, false).setPotionEffect(1, 5, 1, 1.0f);
-	//public static final ItemSeeds coffeeBeans = (ItemSeeds) new ItemSeeds(9204, coffeeCrop.blockID, Block.tilledField.blockID);
 	public final static ItemSeeds coffeeBeans = (ItemSeeds) new CoffeeBeans(9204, coffeeCrop.blockID, Block.tilledField.blockID);
 	public final static Item coffeeCherry = new CoffeeCherry(9205); // Coffee Cherry
 	
