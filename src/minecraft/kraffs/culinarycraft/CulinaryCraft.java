@@ -51,14 +51,12 @@ public class CulinaryCraft {
 		
 		addLang();
 		
-		MinecraftForge.addGrassSeed(new ItemStack(coffeeBeans), 10);
+		addSeeds();
 		
 		//ItemStack eggStack = new ItemStack(Item.egg);
 		//ItemStack friedeggStack = new ItemStack(friedEgg);
 		addRecipes();
 
-		
-		
 		//testFood = new ItemFood(friedeggStack.itemID, 0, 3);
 		
 		registerBlocks();
@@ -67,6 +65,10 @@ public class CulinaryCraft {
 	@PostInit
 	public void postInit(FMLPostInitializationEvent event) {
 		// Stub Method
+	}
+	
+	public void addSeeds() {
+		MinecraftForge.addGrassSeed(new ItemStack(coffeeBeans), 10);
 	}
 	
 	public void registerBlocks() {
