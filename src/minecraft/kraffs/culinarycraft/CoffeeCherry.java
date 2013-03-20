@@ -1,6 +1,7 @@
 package kraffs.culinarycraft;
 
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class CoffeeCherry extends Item {
@@ -8,6 +9,7 @@ public class CoffeeCherry extends Item {
 	public CoffeeCherry(int id) {
 		super(id);
 		// TODO Auto-generated constructor stub
+		setCreativeTab(CreativeTabs.tabMisc);
 	}
 
 	@Override
