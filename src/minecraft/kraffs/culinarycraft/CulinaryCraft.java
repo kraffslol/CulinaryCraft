@@ -51,11 +51,7 @@ public class CulinaryCraft {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 		
-		LanguageRegistry.addName(friedEgg, "Fried Egg");
-		LanguageRegistry.addName(Cup, "Empty Cup");
-		LanguageRegistry.addName(Coffee, "Coffee");
-		LanguageRegistry.addName(coffeeCherry, "Coffee Cherry");
-		LanguageRegistry.addName(coffeeBeans, "Green Coffee Seed");
+		addLang();
 		
 		MinecraftForge.addGrassSeed(new ItemStack(coffeeBeans), 10);
 		
@@ -73,6 +69,14 @@ public class CulinaryCraft {
 	@PostInit
 	public void postInit(FMLPostInitializationEvent event) {
 		// Stub Method
+	}
+	
+	public void addLang() {
+		LanguageRegistry.addName(friedEgg, "Fried Egg");
+		LanguageRegistry.addName(Cup, "Empty Cup");
+		LanguageRegistry.addName(Coffee, "Coffee");
+		LanguageRegistry.addName(coffeeCherry, "Coffee Cherry");
+		LanguageRegistry.addName(coffeeBeans, "Green Coffee Seed");
 	}
 	
 	public void addRecipes() {
