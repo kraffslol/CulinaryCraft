@@ -26,7 +26,6 @@ public class CulinaryCraft {
 	@Instance("CulinaryCraft")
 	public static CulinaryCraft instance;
 	
-	//private final static Item friedEgg = new FriedEgg(9201);
 	public static final Block coffeeCrop = new CoffeeCrop(2871);
 	
 	private final static Item friedEgg = new FriedEgg(9201, 5, 2.0F, false);
