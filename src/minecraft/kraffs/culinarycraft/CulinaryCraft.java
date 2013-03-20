@@ -72,6 +72,7 @@ public class CulinaryCraft {
 	}
 	
 	public void addLang() {
+		// More to come
 		LanguageRegistry.addName(friedEgg, "Fried Egg");
 		LanguageRegistry.addName(Cup, "Empty Cup");
 		LanguageRegistry.addName(Coffee, "Coffee");
