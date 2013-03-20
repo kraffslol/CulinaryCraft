@@ -60,15 +60,19 @@ public class CulinaryCraft {
 		addRecipes();
 
 		
-		GameRegistry.registerBlock(coffeeCrop, "coffeeCrop");
+		
 		//testFood = new ItemFood(friedeggStack.itemID, 0, 3);
 		
-		
+		registerBlocks();
 	}
 	
 	@PostInit
 	public void postInit(FMLPostInitializationEvent event) {
 		// Stub Method
+	}
+	
+	public void registerBlocks() {
+		GameRegistry.registerBlock(coffeeCrop, "coffeeCrop");
 	}
 	
 	public void addLang() {
