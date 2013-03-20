@@ -9,6 +9,7 @@ public class CoffeeCherry extends Item {
 	public CoffeeCherry(int id) {
 		super(id);
 		// TODO Auto-generated constructor stub
+		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
 	}
 
