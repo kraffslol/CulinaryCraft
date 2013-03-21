@@ -16,6 +16,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -27,6 +28,7 @@ public class CulinaryCraft {
 	public static CulinaryCraft instance;
 	
 	public static final Block coffeeCrop = new CoffeeCrop(2871);
+	public static final Block coffeeGrinder = new CoffeeGrinder(2872);
 	
 	private final static Item friedEgg = new FriedEgg(9201, 5, 2.0F, false);
 	private final static Item Cup = new Cup(9202);
@@ -47,6 +49,7 @@ public class CulinaryCraft {
 	
 	@Init
 	public void load(FMLInitializationEvent event) {
+		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
 		proxy.registerRenderers();
 		
 		addLang();
@@ -60,6 +63,8 @@ public class CulinaryCraft {
 		//testFood = new ItemFood(friedeggStack.itemID, 0, 3);
 		
 		registerBlocks();
+		
+		GameRegistry.registerTileEntity(TileEntityCoffeeGrinder.class, "CoffeeGrinder");		
 	}
 	
 	@PostInit
@@ -73,10 +78,12 @@ public class CulinaryCraft {
 	
 	public void registerBlocks() {
 		GameRegistry.registerBlock(coffeeCrop, "coffeeCrop");
+		GameRegistry.registerBlock(coffeeGrinder, "coffeeGrinder");
 	}
 	
 	public void addLang() {
 		// More to come
+		LanguageRegistry.addName(coffeeGrinder, "Coffee Grinder");
 		LanguageRegistry.addName(friedEgg, "Fried Egg");
 		LanguageRegistry.addName(Cup, "Empty Cup");
 		LanguageRegistry.addName(Coffee, "Coffee");
