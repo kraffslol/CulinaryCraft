@@ -11,6 +11,7 @@ import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.world.World;
 
 public class CoffeeGrinder extends BlockContainer {
@@ -19,15 +20,27 @@ public class CoffeeGrinder extends BlockContainer {
 		super(id, Material.iron);
 		setUnlocalizedName("CoffeeGrinder");
 		setHardness(3.0F);
-		setBlockBounds(0.0625F, 0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
+		//setBlockBounds(0.0625F, 0F, 0.0625F, 0.9375F, 0.875F, 0.9375F);
 		
 		setCreativeTab(CreativeTabs.tabMisc);
 		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
+	public boolean isOpaqueCube() {
+		return false;
+	}
+	
+	@Override
+	public boolean renderAsNormalBlock()
+	{
+		return false;
+	}
+	
+	@Override
 	public void func_94332_a(IconRegister par1IconRegister)
 	{
+		System.out.println("Rightclicked");
 		this.field_94336_cN = par1IconRegister.func_94245_a("culinarycraft:coffeegrinder");
 	}
 
@@ -49,23 +62,13 @@ public class CoffeeGrinder extends BlockContainer {
         super.onBlockAdded(world, i, j, k);
         world.markBlockForUpdate(i, j, k);
     }
+    
 
     @Override
     public TileEntity createNewTileEntity(World world) {
         return new TileEntityCoffeeGrinder();
+        //return new TileEntityChest();
     	//return null;
-    }
-    
-    @Override
-    public boolean func_96468_q_()
-    {
-        return true;
-    }
-    
-    @Override
-    public int func_94328_b_(World par1World, int par2, int par3, int par4, int par5)
-    {
-        return Container.func_94526_b((TileEntityCoffeeGrinder) par1World.getBlockTileEntity(par2, par3, par4));
     }
     
 //    @Override

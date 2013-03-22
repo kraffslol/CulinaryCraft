@@ -21,6 +21,7 @@ public class ContainerCoffeeGrinder extends Container {
 		}
 		
 		bindPlayerInventory(inventoryPlayer);
+		te.openChest();
 		// TODO Auto-generated constructor stub
 	}
 	

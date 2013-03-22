@@ -16,7 +16,7 @@ public class GuiCoffeeGrinder extends GuiContainer {
 	@Override
 	protected void drawGuiContainerForegroundLayer(int param1, int param2) {
 		fontRenderer.drawString("Coffee Grinder", 8, 6, 4210752);
-		fontRenderer.drawString(StatCollector.translateToLocal("container.inventory"), 8, ySize - 96 + 2, 4210752);
+		fontRenderer.drawString(StatCollector.translateToLocal("CoffeeGrinder"), 8, ySize - 96 + 2, 4210752);
 	}
 	
 	@Override
@@ -28,7 +28,9 @@ public class GuiCoffeeGrinder extends GuiContainer {
 		//GL11.glBindTexture(GL11.GL_TEXTURE_2D, mc.renderEngine.getTexture("/gui/trap.png"));
 		int x = (width - xSize) / 2;
 		int y = (height - ySize) / 2;
-		drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
+		drawGradientRect(20, 20, width - 20, height - 20, 0x60bb0000, 0xa0770055);
+		super.drawScreen(par3, par2, par1);
+		//drawTexturedModalRect(x, y, 0, 0, xSize, ySize);
 	}
 
 }

@@ -10,21 +10,15 @@ import kraffs.culinarycraft.GuiCoffeeGrinder;
 import kraffs.culinarycraft.TileEntityCoffeeGrinder;
 
 public class ClientProxy extends CommonProxy {
-
-	@Override
-	public void registerRenderers() {
-		//MinecraftForgeClient.preloadTexture(ITEMS_PNG);
-		//MinecraftForgeClient.preloadTexture(BLOCK_PNG);
-	}
 	
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
 	{        
         TileEntity te = world.getBlockTileEntity(x, y, z);
-        if (te != null && te instanceof TileEntityCoffeeGrinder)
+        if (te != null)
         {
         	return new GuiCoffeeGrinder(player.inventory, (TileEntityCoffeeGrinder) te);
-            //return GUIChest.GUI.buildGUI(IronChestType.values()[ID], player.inventory, (TileEntityIronChest) te);
+                    //return GUIChest.GUI.buildGUI(IronChestType.values()[ID], player.inventory, (TileEntityIronChest) te);
         }
         else
         {

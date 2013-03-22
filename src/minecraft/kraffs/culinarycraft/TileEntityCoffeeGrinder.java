@@ -130,7 +130,7 @@ public class TileEntityCoffeeGrinder extends TileEntity implements IInventory {
     
     @Override
     public String getInvName() {
-    	return "container.CoffeeGrinder";
+    	return "CoffeeGrinder";
     }
 	
 }

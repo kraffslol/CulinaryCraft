@@ -9,9 +9,6 @@ public class CommonProxy implements IGuiHandler {
 	//public static String ITEMS_PNG = "/kraffs/culinarycraft/items.png";	
 	//public static String BLOCK_PNG = "/kraffs/culinarycraft/block.png";
 	
-	public void registerRenderers() {
-		
-	}
 	
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)

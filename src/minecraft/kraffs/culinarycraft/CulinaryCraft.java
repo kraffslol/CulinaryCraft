@@ -50,7 +50,6 @@ public class CulinaryCraft {
 	@Init
 	public void load(FMLInitializationEvent event) {
 		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
-		proxy.registerRenderers();
 		
 		addLang();
 		
@@ -65,6 +64,7 @@ public class CulinaryCraft {
 		registerBlocks();
 		
 		GameRegistry.registerTileEntity(TileEntityCoffeeGrinder.class, "CoffeeGrinder");		
+		MinecraftForge.EVENT_BUS.register(this);
 	}
 	
 	@PostInit
@@ -78,7 +78,7 @@ public class CulinaryCraft {
 	
 	public void registerBlocks() {
 		GameRegistry.registerBlock(coffeeCrop, "coffeeCrop");
-		GameRegistry.registerBlock(coffeeGrinder, "coffeeGrinder");
+		GameRegistry.registerBlock(coffeeGrinder, "CoffeeGrinder");
 	}
 	
 	public void addLang() {
