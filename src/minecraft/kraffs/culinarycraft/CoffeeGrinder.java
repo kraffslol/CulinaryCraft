@@ -52,7 +52,7 @@ public class CoffeeGrinder extends BlockContainer {
 			return false;
 		}
 		
-		player.openGui(CulinaryCraft.instance, 0, world, y, y, z);
+		player.openGui(CulinaryCraft.instance, 0, world, x, y, z);
 		return true;
 	}
 	

@@ -27,6 +27,8 @@ public class CulinaryCraft {
 	@Instance("CulinaryCraft")
 	public static CulinaryCraft instance;
 	
+	public static GuiHandler guiHandler = new GuiHandler();
+	
 	public static final Block coffeeCrop = new CoffeeCrop(2871);
 	public static final Block coffeeGrinder = new CoffeeGrinder(2872);
 	
@@ -49,7 +51,7 @@ public class CulinaryCraft {
 	
 	@Init
 	public void load(FMLInitializationEvent event) {
-		NetworkRegistry.instance().registerGuiHandler(instance, proxy);
+		NetworkRegistry.instance().registerGuiHandler(instance, guiHandler);
 		
 		addLang();
 		

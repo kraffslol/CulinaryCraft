@@ -11,19 +11,5 @@ import kraffs.culinarycraft.TileEntityCoffeeGrinder;
 
 public class ClientProxy extends CommonProxy {
 	
-	@Override
-	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z)
-	{        
-        TileEntity te = world.getBlockTileEntity(x, y, z);
-        if (te != null)
-        {
-        	return new GuiCoffeeGrinder(player.inventory, (TileEntityCoffeeGrinder) te);
-                    //return GUIChest.GUI.buildGUI(IronChestType.values()[ID], player.inventory, (TileEntityIronChest) te);
-        }
-        else
-        {
-            return null;
-        }
-	}
 	
 }
