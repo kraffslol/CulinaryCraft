@@ -94,6 +94,7 @@ public class CulinaryCraft {
 	}
 	
 	public void addRecipes() {
+		GameRegistry.addRecipe(new ItemStack(coffeeGrinder, 4, 0), new Object[]{"DD", 'D', Block.dirt});
 		GameRegistry.addShapelessRecipe(new ItemStack(coffeeBeans, 4),  new ItemStack(coffeeCherry));
 		GameRegistry.addSmelting(Item.egg.itemID, new ItemStack(friedEgg), 0.1f);
 	}
