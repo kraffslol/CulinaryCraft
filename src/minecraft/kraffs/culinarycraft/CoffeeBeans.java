@@ -10,6 +10,7 @@ public class CoffeeBeans extends ItemSeeds {
 		super(par1, par2, par3);
 		setMaxStackSize(64);
 		setCreativeTab(CreativeTabs.tabMisc);
+		setUnlocalizedName("GreenCoffeeSeed");
 	}
 	
 	@Override

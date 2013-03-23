@@ -18,7 +18,8 @@ public class RecipesCoffeeGrinder {
 	
 	private RecipesCoffeeGrinder()
 	{
-		addSmelting(Block.dirt.blockID, new ItemStack(Block.cobblestone, 1, 0), 0.7F);
+		//addSmelting(Block.dirt.blockID, new ItemStack(Block.cobblestone, 1, 0), 0.7F);
+		//addSmelting(9206, new ItemStack(Block.cobblestone, 1, 0), 0.7F);
 	}
 	
 	public void addSmelting(int id, ItemStack itemStack, float experience) {

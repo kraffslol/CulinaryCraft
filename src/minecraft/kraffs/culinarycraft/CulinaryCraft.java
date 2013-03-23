@@ -37,6 +37,8 @@ public class CulinaryCraft {
 	private final static Item Coffee = new Coffee(9203, 1, 2.0F, false).setPotionEffect(1, 5, 1, 1.0f);
 	public final static ItemSeeds coffeeBeans = (ItemSeeds) new CoffeeBeans(9204, coffeeCrop.blockID, Block.tilledField.blockID);
 	public final static Item coffeeCherry = new CoffeeCherry(9205); // Coffee Cherry
+	public final static Item driedcoffeeBeans = new DriedCoffeeBeans(9206);
+	public final static Item coffeePowder = new CoffeePowder(9207);
 	
 	// Test
 	
@@ -60,6 +62,7 @@ public class CulinaryCraft {
 		//ItemStack eggStack = new ItemStack(Item.egg);
 		//ItemStack friedeggStack = new ItemStack(friedEgg);
 		addRecipes();
+		RecipesCoffeeGrinder.smelting().addSmelting(driedcoffeeBeans.itemID, new ItemStack(coffeePowder, 2, 0), 0.7F);
 
 		//testFood = new ItemFood(friedeggStack.itemID, 0, 3);
 		
@@ -91,12 +94,15 @@ public class CulinaryCraft {
 		LanguageRegistry.addName(Coffee, "Coffee");
 		LanguageRegistry.addName(coffeeCherry, "Coffee Cherry");
 		LanguageRegistry.addName(coffeeBeans, "Green Coffee Seed");
+		LanguageRegistry.addName(driedcoffeeBeans, "Coffee Beans");
+		LanguageRegistry.addName(coffeePowder, "Coffee Powder");
 	}
 	
 	public void addRecipes() {
 		GameRegistry.addRecipe(new ItemStack(coffeeGrinder, 4, 0), new Object[]{"DD", 'D', Block.dirt});
 		GameRegistry.addShapelessRecipe(new ItemStack(coffeeBeans, 4),  new ItemStack(coffeeCherry));
 		GameRegistry.addSmelting(Item.egg.itemID, new ItemStack(friedEgg), 0.1f);
+		GameRegistry.addSmelting(coffeeCherry.itemID, new ItemStack(driedcoffeeBeans), 0.1f);
 	}
 	
 }
