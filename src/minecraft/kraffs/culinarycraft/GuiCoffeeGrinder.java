@@ -26,7 +26,7 @@ public class GuiCoffeeGrinder extends GuiContainer {
 		int texture = mc.renderEngine.getTexture("/mods/culinarycraft/textures/gui/coffeegrinder.png");
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
 		//mc.renderEngine.func_98187_b("/mods/culinarycraft/textures/blocks/coffeegrinder.png");
-		mc.renderEngine.func_98187_b("/mods/culinarycraft/textures/gui/coffeegrinder.png");
+		mc.renderEngine.bindTexture("/mods/culinarycraft/textures/gui/coffeegrinder.png");
 		//this.mc.renderEngine.bindTexture(texture);
 		//GL11.glBindTexture(GL11.GL_TEXTURE_2D, mc.renderEngine.getTexture("/gui/trap.png"));
 		int x = (width - xSize) / 2;

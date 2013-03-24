@@ -63,6 +63,7 @@ public class CulinaryCraft {
 		//ItemStack friedeggStack = new ItemStack(friedEgg);
 		addRecipes();
 		RecipesCoffeeGrinder.smelting().addSmelting(driedcoffeeBeans.itemID, new ItemStack(coffeePowder, 2, 0), 0.7F);
+		//ic2.api.Ic2Recipes.addMaceratorRecipe(new ItemStack(driedcoffeeBeans), new ItemStack(coffeePowder, 2, 0));
 
 		//testFood = new ItemFood(friedeggStack.itemID, 0, 3);
 		

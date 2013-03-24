@@ -14,9 +14,9 @@ public class DriedCoffeeBeans extends Item {
 	}
 
 	@Override
-	public void func_94581_a(IconRegister iconRegister)
+	public void updateIcons(IconRegister iconRegister)
 	{
-		iconIndex = iconRegister.func_94245_a("culinarycraft:coffeebeans");
+		iconIndex = iconRegister.registerIcon("culinarycraft:coffeebeans");
 	}
 	
 }

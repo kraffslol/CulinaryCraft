@@ -16,9 +16,9 @@ public class Coffee extends ItemFood {
 	}
 	
 	@Override
-	public void func_94581_a(IconRegister iconRegister)
+	public void updateIcons(IconRegister iconRegister)
 	{
-		iconIndex = iconRegister.func_94245_a("culinarycraft:coffee");
+		iconIndex = iconRegister.registerIcon("culinarycraft:coffee");
 	}
 
 }

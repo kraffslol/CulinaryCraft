@@ -215,16 +215,14 @@ public class TileEntityCoffeeGrinder extends TileEntity implements IInventory {
             System.out.println("Write:"+front);
             System.out.println("Burn:"+BurnTime);
     }*/
-
+    
     @Override
-    public boolean func_94042_c()
-    {
+    public boolean isInvNameLocalized() {
     	return false;
     }
     
     @Override
-    public boolean func_94041_b(int par1, ItemStack par2ItemStack)
-    {
+    public boolean isStackValidForSlot(int par1, ItemStack par2ItemStack) {
     	return false;
     }
     

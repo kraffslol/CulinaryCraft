@@ -39,17 +39,17 @@ public class CoffeeCrop extends Block {
 	/*@Override
 	public void func_94332_a(IconRegister par1IconRegister)
 	{
-	         this.field_94336_cN = par1IconRegister.func_94245_a("culinarycraft:coffeecrop");
+	         this.field_94336_cN = par1IconRegister.registerIcon("culinarycraft:coffeecrop");
 	} */
 	
 	@Override
-    public void func_94332_a(IconRegister par1IconRegister)
+    public void registerIcons(IconRegister par1IconRegister)
     {
         this.field_94364_a = new Icon[2];
 
         for (int i = 0; i < this.field_94364_a.length; ++i)
         {
-            this.field_94364_a[i] = par1IconRegister.func_94245_a("culinarycraft:coffeecrop_" + i);
+            this.field_94364_a[i] = par1IconRegister.registerIcon("culinarycraft:coffeecrop_" + i);
         }
     }
     
