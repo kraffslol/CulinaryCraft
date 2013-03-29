@@ -1,4 +1,7 @@
-package kraffs.culinarycraft;
+package kraffs.culinarycraft.client.gui;
+
+import kraffs.culinarycraft.inventory.ContainerCoffeeGrinder;
+import kraffs.culinarycraft.tileentity.TileEntityCoffeeGrinder;
 
 import org.lwjgl.opengl.GL11;
 

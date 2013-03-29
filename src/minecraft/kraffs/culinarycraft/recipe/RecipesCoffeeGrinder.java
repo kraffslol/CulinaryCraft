@@ -1,4 +1,4 @@
-package kraffs.culinarycraft;
+package kraffs.culinarycraft.recipe;
 
 import java.util.HashMap;
 import java.util.Map;

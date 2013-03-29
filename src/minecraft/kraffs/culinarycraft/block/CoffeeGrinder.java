@@ -1,5 +1,7 @@
-package kraffs.culinarycraft;
+package kraffs.culinarycraft.block;
 
+import kraffs.culinarycraft.CulinaryCraft;
+import kraffs.culinarycraft.tileentity.TileEntityCoffeeGrinder;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.Block;
@@ -52,8 +54,10 @@ public class CoffeeGrinder extends BlockContainer {
 		if (tile_entity == null || player.isSneaking()) {
 			return false;
 		}
+		if( !world.isRemote ) {
+			player.openGui(CulinaryCraft.instance, 0, world, x, y, z);
+		}
 		
-		player.openGui(CulinaryCraft.instance, 0, world, x, y, z);
 		return true;
 	}
 	

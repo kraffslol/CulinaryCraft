@@ -1,6 +1,8 @@
-package kraffs.culinarycraft;
+package kraffs.culinarycraft.block;
 
 import java.util.Random;
+
+import kraffs.culinarycraft.CulinaryCraft;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

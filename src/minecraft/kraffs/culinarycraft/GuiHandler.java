@@ -1,5 +1,8 @@
 package kraffs.culinarycraft;
 
+import kraffs.culinarycraft.client.gui.GuiCoffeeGrinder;
+import kraffs.culinarycraft.inventory.ContainerCoffeeGrinder;
+import kraffs.culinarycraft.tileentity.TileEntityCoffeeGrinder;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;

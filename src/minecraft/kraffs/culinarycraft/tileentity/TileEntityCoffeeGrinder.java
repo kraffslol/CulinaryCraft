@@ -1,5 +1,6 @@
-package kraffs.culinarycraft;
+package kraffs.culinarycraft.tileentity;
 
+import kraffs.culinarycraft.recipe.RecipesCoffeeGrinder;
 import net.minecraft.src.ModLoader;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.block.Block;

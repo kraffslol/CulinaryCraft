@@ -1,5 +1,17 @@
 package kraffs.culinarycraft;
 
+import kraffs.culinarycraft.block.CoffeeCrop;
+import kraffs.culinarycraft.block.CoffeeGrinder;
+import kraffs.culinarycraft.item.Coffee;
+import kraffs.culinarycraft.item.CoffeeBeans;
+import kraffs.culinarycraft.item.CoffeeCherry;
+import kraffs.culinarycraft.item.CoffeePowder;
+import kraffs.culinarycraft.item.Cup;
+import kraffs.culinarycraft.item.DriedCoffeeBeans;
+import kraffs.culinarycraft.item.FriedEgg;
+import kraffs.culinarycraft.network.PacketHandler;
+import kraffs.culinarycraft.recipe.RecipesCoffeeGrinder;
+import kraffs.culinarycraft.tileentity.TileEntityCoffeeGrinder;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
@@ -21,7 +33,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid="CulinaryCraft", name="CulinaryCraft", version="0.0.0")
-@NetworkMod(clientSideRequired=true, serverSideRequired=false)
+@NetworkMod(clientSideRequired=true, serverSideRequired=false, channels={"ccraft"}, packetHandler = PacketHandler.class)
 public class CulinaryCraft {
 
 	@Instance("CulinaryCraft")
@@ -64,7 +76,6 @@ public class CulinaryCraft {
 		addRecipes();
 		RecipesCoffeeGrinder.smelting().addSmelting(driedcoffeeBeans.itemID, new ItemStack(coffeePowder, 2, 0), 0.7F);
 		//ic2.api.Ic2Recipes.addMaceratorRecipe(new ItemStack(driedcoffeeBeans), new ItemStack(coffeePowder, 2, 0));
-
 		//testFood = new ItemFood(friedeggStack.itemID, 0, 3);
 		
 		registerBlocks();

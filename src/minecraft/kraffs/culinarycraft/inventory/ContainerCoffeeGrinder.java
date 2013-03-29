@@ -1,6 +1,10 @@
-package kraffs.culinarycraft;
+package kraffs.culinarycraft.inventory;
 
 import java.util.Iterator;
+
+import kraffs.culinarycraft.SlotCoffeeGrinder;
+import kraffs.culinarycraft.recipe.RecipesCoffeeGrinder;
+import kraffs.culinarycraft.tileentity.TileEntityCoffeeGrinder;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;

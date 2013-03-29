@@ -1,4 +1,4 @@
-package kraffs.culinarycraft;
+package kraffs.culinarycraft.item;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
